@@ -1,0 +1,47 @@
+<section id="login">
+    <div class="container text-muted">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 mt-4">
+                <form class="form-login bg-dark">
+                    <div class="col-10 offset-1 mt-3">
+                        <div class="text-center mb-4">
+                            <h1 class="h3 mb-3 font-weight-normal">Bienvenido a</h1>
+                            <h3 class="text-uppercase font-italic">NetGrid</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-unity" viewBox="0 0 15 15">
+                                <path
+                                    d="M15 11.2V3.733L8.61 0v2.867l2.503 1.466c.099.067.099.2 0 .234L8.148 6.3c-.099.067-.197.033-.263 0L4.92 4.567c-.099-.034-.099-.2 0-.234l2.504-1.466V0L1 3.733V11.2v-.033.033l2.438-1.433V6.833c0-.1.131-.166.197-.133L6.6 8.433c.099.067.132.134.132.234v3.466c0 .1-.132.167-.198.134L4.031 10.8l-2.438 1.433L7.983 16l6.391-3.733-2.438-1.434L9.434 12.3c-.099.067-.198 0-.198-.133V8.7c0-.1.066-.2.132-.233l2.965-1.734c.099-.066.197 0 .197.134V9.8L15 11.2Z" />
+                            </svg>
+                           
+                        </div>
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" [formControl]="email" class="form-control"
+                                placeholder="admin@ejemplo.cxom" autofocus>
+                            <label for="inputEmail">Usuario</label>
+                            <div *ngIf="email.touched && email.invalid" class="alert alert-danger small" role="alert">
+                                Email Invalido!...
+                            </div>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" [formControl]="password" class="form-control"
+                                placeholder="Password">
+                            <label for="inputPassword">Password</label>
+                        </div>
+                        <div *ngIf="password.touched && password.invalid" class="alert alert-danger small" role="alert">
+                            La contraseña debe tener mínimo 5 caracteres!...
+                        </div>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Recordarme
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-sm btn-success btn-block" type="submit"
+                            (click)="login()">Ingresar</button>
+                        <a class="nav-link btn btn-lg btn-sm btn-info btn-block" routerLink="../register" routerLinkActive="">Registrarse</a>
+                        <p class="mt-5 mb-3 text-muted text-center">&copy; 2022-2023</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

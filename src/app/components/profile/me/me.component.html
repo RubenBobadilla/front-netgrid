@@ -1,0 +1,48 @@
+<a class="nav-link" routerLink="" routerLinkActive="">Atrás<span class="sr-only">(current)</span></a>
+<section id="perfil">
+    <div class="container text-muted">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 mt-4 bg-dark">
+                <form [formGroup]="formPerfil" enctype="multipart/form-data">
+                    <h3 class="text-center font-weight-bold">Revisa y Actualiza tus datos de Perfil</h3>
+            
+                    <input type="hidden" class="d-none" formControlName="id" class="form-control">
+                    <div class="form-row">
+                        <div class="form-group col-md mt-4">
+                            <label for="pass">Email</label>
+                            <input formControlName="mail" type="mail" class="form-control" id="mail" readonly>
+                        </div>                        
+                    </div> 
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Nombre</label>
+                            <input type="text" formControlName="name" class="form-control" id="name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="address">Dirección</label>
+                            <input formControlName="address" type="text" class="form-control" id="address">
+                        </div>
+                    </div>                                     
+                                       
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="city">Ciudad</label>
+                            <input formControlName="city" type="text" id="city" class="form-control">
+                        </div>                        
+                        <div class="form-group col-md-6">
+                            <label for="birthdate">Fecha de Cumpleaños</label>
+                            <input formControlName="birthdate" type="date" id="birthdate" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 offset-3">
+                            <button type="submit" class="btn btn-success btn-block" data-dismiss="modal"
+                                (click)="update()">Actualizar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

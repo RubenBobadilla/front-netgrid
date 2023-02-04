@@ -1,0 +1,81 @@
+<div id="listar">    
+    <h3 class="text-center font-italic mb-2">Lista de Personajes PokéApi</h3>
+    <div class="table-responsive">
+        <table class="table table-hover text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" class="text-uppercase">LIKE</th>
+                    <th scope="col" class="text-uppercase">Nombre</th>
+                    <th colspan="2" scope="col" class="text-uppercase">URL</th>       
+                    <th scope="col" class="text-uppercase">Opciones</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr *ngFor="let personaje of pokemons; let indice = index">
+                    <th scope="row"><input type="checkbox" class="form-check-input" (click)="saveLike(personaje.url)"></th>
+                    <td>{{personaje.name}}</td>
+                    <td colspan="2">{{personaje.url}}</td>   
+                    <td>
+                        <button type="submit" class="btn btn-success btn-small mr-1" data-toggle="modal"
+                            data-target="#modalShow" (click)="show(personaje.id)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </td>                  
+                </tr>
+            </tbody>
+        </table>
+    </div> <!-- /end_Table-->
+
+    <!-- Modal Show ----------------->
+    <div class="modal fade" id="modalShow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg col-12 col-md col-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Personajes / Listar /
+                        Vista_Previa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="createPurch">
+
+                        <form [formGroup]="showPersonajeForm">
+                            <h4 class="text-center font-italic">Detalle del Pokemón</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" formControlName="name" class="form-control" id="name" readonly>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="altura">Altura (MT)</label>
+                                    <input type="number" formControlName="altura" class="form-control"
+                                        id="altura" readonly>
+                                </div>                               
+                            </div>
+                            <div class="form-row">                                
+                                <div class="form-group col-md-6">
+                                    <label for="urlArea">Url área </label>
+                                    <input type="text" formControlName="urlArea" class="form-control" id="urlArea"
+                                        readonly>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="weight">Peso (kg)</label>
+                                    <input type="text" formControlName="weight" class="form-control" id="move" readonly>
+                                </div>                                                              
+                            </div>
+                            
+                        </form><!-- /End Form-->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Show---------------------------------->
+
+</div>

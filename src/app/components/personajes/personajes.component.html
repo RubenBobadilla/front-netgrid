@@ -1,0 +1,107 @@
+<div id="wrapper" class="">
+    <!--add si quiere aparecer y desaparecer class="toggled"-->
+
+    <!--Sidebar-->
+    <div id="sidebar-wrapper">
+
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a class="navbar-brand col-11 offsset-1 text-center" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-unity" viewBox="0 0 15 15">
+                        <path
+                            d="M15 11.2V3.733L8.61 0v2.867l2.503 1.466c.099.067.099.2 0 .234L8.148 6.3c-.099.067-.197.033-.263 0L4.92 4.567c-.099-.034-.099-.2 0-.234l2.504-1.466V0L1 3.733V11.2v-.033.033l2.438-1.433V6.833c0-.1.131-.166.197-.133L6.6 8.433c.099.067.132.134.132.234v3.466c0 .1-.132.167-.198.134L4.031 10.8l-2.438 1.433L7.983 16l6.391-3.733-2.438-1.434L9.434 12.3c-.099.067-.198 0-.198-.133V8.7c0-.1.066-.2.132-.233l2.965-1.734c.099-.066.197 0 .197.134V9.8L15 11.2Z" />
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item ml-3">
+                <a class="navbar-brand" href="#">
+                    Software NetGrid </a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="" routerLinkActive="">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+            </li>                       
+            <li class="nav-item">
+                <a class="nav-link" routerLink="../personajes" routerLinkActive="">Personajes</a>
+            </li>            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-erp" href="#" role="button" data-toggle="dropdown"
+                    aria-expanded="false">
+                    Perfil
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" routerLink="../me" routerLinkActive="active">Me</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="../logout" routerLinkActive="active">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /#Sidebar-Wrapper-->
+
+    <!-- Page-Content-->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container">
+                            <a class="navbar-brand" routerLinkActive="#">Personajes /</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item mb-2">
+                                        <a class="nav-item nav-link active text-uppercase" routerLink=""
+                                            routerLinkActive="">Ir
+                                            Atrás<span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item mb-2 mr-2">
+                                        <a class="nav-item btn btn-info text-uppercase" id="listarI"
+                                            routerLink="index">Listar</a>
+                                    </li> 
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mt-2 mb-2">
+                    <a href="#menu-toggle" class="btn btn-primary d-md-none d-lg-none" id="menu-toggle">Toggle Menu</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 offset-2 mt-2 text-center" id="cardPersonajes">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Bienvenido al Módulo de Personajes</h3>
+                            <h4 class="card-title mb-0">3-02-2023</h4>
+                            <div class="badges mb-2">
+                                <span class="badge badge-success">GRAFICAS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /#Page-Content-Wrapper-->
+            <div class="col">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+
+</div>

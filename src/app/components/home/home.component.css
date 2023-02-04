@@ -1,0 +1,29 @@
+#main .carousel-inner img{
+    max-height: 80vh; /*Esto estira la img un 705 de la altura*/
+    object-fit: cover; /*Acerca un poco la img y la estiliza mejor*/
+    filter: grayscale(70%); /*Escala de grises en las img, distorsiona un poco el color de las img*/
+    
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+    height: 100%;
+}
+
+.footer {
+    height: 100%;
+}
